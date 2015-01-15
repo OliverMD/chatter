@@ -1,0 +1,23 @@
+.centered{
+    text-align: center;
+}
+.navbar{
+    text-align: center;
+}
+#leftCol{
+    float:left;
+}
+#rightCol{
+    float:right;
+}
+body {
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+table {
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+td{
+    width:10%;
+}

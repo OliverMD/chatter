@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="Oliver Downard" content="">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <title>Chatter</title>
+</head>
+<body ng-app="app">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Chatter</a>
+        </div>
+    </div>
+</nav>
+<div ng-controller="AppCtrl" class="container-fluid">
+    <div class="row jumbotron">
+        <div class="col-xs-12 col-sm-6 col-md-8 ">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th><h3>Messages</h3>
+                    </th>
+                </tr>
+                </thead>
+                <tbody ng-repeat="message in messages">
+                <tr>
+                    <td>
+                        {{message.message}}
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-xs-6 col-md-4 panel panel-default">
+            <div class="bs-example panel-body">
+                <form class="form-horizontal" ng-submit="addMessage()">
+                    <fieldset>
+                        <div class="form-group">
+                            <div>
+                                <input type="text" class="form-control"  ng-model="newMessage" placeholder="Message">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
